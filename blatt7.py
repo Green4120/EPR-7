@@ -85,14 +85,14 @@ def optimal_path(graph, start, goal, mode, visited=None, path=None, effort=0, di
     if path is None:
         path = [start]
 
-    # Base case: goal reached
+    # base case: goal reached
     if start == goal:
         return effort, distraction, path
 
     visited.add(start)
     best_result = None
 
-    # Explore all neighbors
+    # exploring all neighbors
     for edge, values in graph[start].items():
         neighbor = edge.replace(start, "")
         if neighbor not in visited:
@@ -105,14 +105,14 @@ def optimal_path(graph, start, goal, mode, visited=None, path=None, effort=0, di
                 if best_result is None:
                     best_result = result
                 else:
-                    # Choose optimization rule
+                    # choose optimization rule
                     if mode == "effort":  # minimize effort
                         if result[0] < best_result[0]:
                             best_result = result
                     elif mode == "distraction":  # maximize distraction
                         if result[1] > best_result[1]:
                             best_result = result
-                    elif mode == "combined":  # example: minimize effort - distraction
+                    elif mode == "combined":  # minimize effort - distraction
                         if (result[0] - result[1]) < (best_result[0] - best_result[1]):
                             best_result = result
 
@@ -139,3 +139,4 @@ if __name__ == "__main__":
             f"Optimal ({mode}) -> effort: {effort}, distraction: {distraction}, path: {path}\n")
 
     print("----- End of Testing -----")
+
