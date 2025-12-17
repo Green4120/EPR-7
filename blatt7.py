@@ -6,7 +6,6 @@ theese will then be used in the main module to create a concurent running progra
 """
 __author__ = "8407548, Winata, 8655943, Quan"
 from collections import defaultdict, deque
-from tracemalloc import start
 
 graph = {"a": {"ab": [3, 2], "ac": [1, 0]},
          "b": {"ab": [3, 2], "bd": [4, 5], "be": [2, 1]},
