@@ -2,7 +2,7 @@
 This text will briefly explain what each included files does:
 
 -------------------------------------------------
-blatt7.py
+blatt7_greedyansatz.py
 
 First main function: greedy_approach() 
 
@@ -19,7 +19,7 @@ There are total 3 modes for the function to prioritize:
 Result: return path and its cumulative effort/distraction values.
 
 -------------------------------------------------
-blatt7.py
+blatt7_greedyansatz.py
 
 Second main function: optimal_path()
 
@@ -33,10 +33,9 @@ It also works with 3 modes same as greedy_approach() function:
 
  - "combined" → returns one path that minimizes (effort - distraction) as a simple trade-off. 
 
-Result: return tuple (effort, distraction, path) for one optimal path.
-
+Result: return one optimal path and cumulative effort/distraction values.
 -------------------------------------------------
-blatt7.py/blatt7_main.py
+blatt7_greedyansatz.py/blatt7_main.py
 
 Side functions: positions() and mode_choice()
 
@@ -52,7 +51,7 @@ This file contain module consists of time and timeit functions to record the pro
 -------------------------------------------------
 How the Functions Work Together:
 
-(blatt7.py)
+(blatt7_greedyansatz.py)
 
 It serve as the core of the project. Define the graph and implement the pathfinding logic.
 
@@ -68,3 +67,4 @@ Also imports the same algorithms and runs them with fixed input to compare perfo
 
 -------------------------------------------------
 Tks for reading XDD
+
