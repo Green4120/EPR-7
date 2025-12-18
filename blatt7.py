@@ -38,6 +38,15 @@ def greedy_approach(graph, cat, house, mode):
         used to get the maximum amount of effort or distraction
         or combined. the function use four parameters which are graph,
         cat, house, and mode
+
+        Example:
+        >>> greedy_approach(graph, "a", "f", "effort")
+        (['a', 'c', 'd', 'f'], (6, 7))
+        >>> greedy_approach(graph, "a", "f", "combined")
+        [(['a', 'b', 'd', 'f'], (10, 11)), (['a', 'c', 'd', 'f'], (6, 7))]
+        >>> greedy_approach(graph, "c", "f", "distraction")
+        (['c', 'd', 'b', 'a'], (9, 10))
+
         :param graph: mapping
         :param cat: starting point
         :param house: destination (for combined mode)
@@ -285,6 +294,14 @@ def optimal_path(graph, cat, house, mode, visited=None, path=None, eff_num=0, di
     seven parameters which are graph, cat, house, mode, visited, path,
     eff_num, and dis_num.
 
+    Example:
+    >>> optimal_path(graph, "a", "f", "effort")
+    (6, 7, ['a', 'c', 'd', 'f'])
+    >>> optimal_path(graph, "a", "f", "combined")
+    (10, 11, ['a', 'b', 'd', 'f'])
+    >>> optimal_path(graph, "c", "f", "distraction")
+    (11, 11, ['c', 'a', 'b', 'd', 'f'])
+
     :param graph: mapping of nodes and edges with [effort, distraction] values
     :param cat: starting point of the path
     :param house: destination
@@ -376,6 +393,6 @@ if __name__ == "__main__":
     print(optimal_path(graph, "a", "f", "effort"))
     # (6, 7, ['a', 'c', 'd', 'f'])
     print(optimal_path(graph, "a", "f", "combined"))
-    # [(10, 11, ['a', 'b', 'd', 'f'])]
+    # (10, 11, ['a', 'b', 'd', 'f'])
     print(optimal_path(graph, "c", "f", "distraction"))
     # (11, 11, ['c', 'a', 'b', 'd', 'f'])
