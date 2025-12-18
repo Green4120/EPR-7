@@ -32,7 +32,7 @@ It also works with 3 modes same as greedy_approach() function:
 
  - "combined" → returns one path that minimizes (effort - distraction) as a simple trade-off. 
 
-Result: return one optimal path and cumulative effort/distraction values.
+Result: return cumulative effort/distraction values and one optimal path.
 -------------------------------------------------
 blatt7_greedyansatz.py/blatt7_main.py
 
@@ -66,3 +66,4 @@ Also imports the same algorithms and runs them with fixed input to compare perfo
 
 -------------------------------------------------
 Tks for reading XDD
+
