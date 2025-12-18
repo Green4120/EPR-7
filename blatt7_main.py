@@ -10,11 +10,11 @@ from blatt7_greedyansatz import positions, graph, greedy_approach, mode_choice, 
 while True:
     cat, house = positions()
     method = input(
-        "Which method do you want to use ['greedy' or 'optimal']: ").lower()
-    while method != "greedy" and method != "optimal":
-        method = input("Please pick either 'greedy' or 'optimal'! : ").lower()
+        "Which method do you want to use [greedy approach: 1 or optimal approach: 2]: ")
+    while method != "1" and method != "2":
+        method = input("Please pick either 1 for greedy or 2 for optimal! : ")
     mode = mode_choice()
-    if method == "greedy":
+    if method == "1":
         if mode == "combined":
             pareto = greedy_approach(graph, cat, house, mode)
             for result in pareto:
