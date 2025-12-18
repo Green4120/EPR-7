@@ -10,7 +10,7 @@ from blatt7_greedyansatz import positions, graph, greedy_approach, mode_choice, 
 while True:
     cat, house = positions()
     method = input(
-        "Which method do you want to use [greedy' or 'optimal']: ").lower()
+        "Which method do you want to use ['greedy' or 'optimal']: ").lower()
     while method != "greedy" and method != "optimal":
         method = input("Please pick either 'greedy' or 'optimal'! : ").lower()
     mode = mode_choice()
